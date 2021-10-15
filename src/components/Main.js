@@ -1,6 +1,8 @@
 import { useContext, lazy, Suspense, useState } from 'react';
 import { Context } from '../data/context';
 
+import CircularProgress from '@mui/material/CircularProgress';
+
 import SearchIcon from '@mui/icons-material/Search';
 
 const Movies = lazy(() => import('./Movies').then(module => ({default:module.Movies})));
@@ -25,7 +27,7 @@ export function Main(){
                 <button className="search" type="submit"><SearchIcon/></button>
             </form>
         </div>
-        <Suspense fallback={<h1>Loading...</h1>}>
+        <Suspense fallback={<div className="loading"><CircularProgress id="wheel" size={80} disableShrink/></div>}>
             <Movies/>
         </Suspense>
     </div>)
