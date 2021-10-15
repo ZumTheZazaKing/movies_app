@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState } from 'react';
+import { lazy, Suspense, useState, useRef } from 'react';
 import { Context } from '../data/context';
 
 import CircularProgress from '@mui/material/CircularProgress';
@@ -10,6 +10,10 @@ function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [movies, setMovies] = useState([]);
 
+  const [inspect, setInspect] = useState({});
+
+  const infoRef = useRef();
+
   return (
     <div className="App">
       
@@ -17,7 +21,9 @@ function App() {
 
         <Context.Provider value={{
           searchQuery, setSearchQuery,
-          movies, setMovies
+          movies, setMovies,
+          inspect, setInspect,
+          infoRef
         }}>
 
           <Main/>

@@ -3,10 +3,15 @@ body {
   background-color: #170742;
 }
 
+.hide {
+  display: none !important;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .App .loading {
@@ -18,6 +23,44 @@ body {
 }
 .App .loading #wheel {
   color: white;
+}
+.App #Main #Info {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  padding: 10px;
+}
+.App #Main #Info #info-content {
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  padding-bottom: 30px;
+  width: 60%;
+  text-align: center;
+  border-radius: 5px;
+  overflow: auto;
+}
+.App #Main #Info #info-content #close {
+  cursor: pointer;
+  float: right;
+}
+.App #Main #Info #info-content img {
+  width: 180px;
+  height: 250px;
+}
+.App #Main #Info #info-content #genres {
+  color: grey;
+}
+.App #Main #Info #info-content a {
+  color: black;
+  text-decoration: none;
+}
+.App #Main #Info #info-content a:hover {
+  color: #006eff;
 }
 .App #Main #navbar {
   background: #505050;
@@ -50,7 +93,7 @@ body {
   border-radius: 50px 0 0 50px;
 }
 .App #Main #navbar form .search {
-  padding: 5.5px;
+  padding: 6px;
   border: none;
   outline: none;
   color: black;
@@ -64,10 +107,11 @@ body {
   justify-content: center;
 }
 .App #Main #Movies .movie {
-  width: 25vw;
+  width: 20vw;
   height: auto;
   border: 1px solid white;
   background-color: #4921b8;
+  cursor: pointer;
 }
 .App #Main #Movies .movie .img {
   width: 100% !important;
@@ -81,6 +125,9 @@ body {
 }
 
 @media only screen and (max-width: 800px) {
+  .App #Main #Info #info-content {
+    width: 95% !important;
+  }
   .App #Main #navbar input[type=text] {
     width: 60vw;
   }

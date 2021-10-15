@@ -4,7 +4,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import Unavailable from '../images/unavailable.png';
 
 export function Movie(props){
-    return (<div className="movie">
+    return (<div className="movie" onClick={() => props.function(props.data)}>
         <LazyLoadImage 
         src={props.data.poster_path ? `https://image.tmdb.org/t/p/w1280${props.data.poster_path}` : 
         'https://via.placeholder.com/500x700?text=Image+Not+Available'}

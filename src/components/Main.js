@@ -6,6 +6,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import SearchIcon from '@mui/icons-material/Search';
 
 const Movies = lazy(() => import('./Movies').then(module => ({default:module.Movies})));
+const Info = lazy(() => import('./Info').then(module => ({default:module.Info})));
 
 export function Main(){
 
@@ -20,6 +21,7 @@ export function Main(){
     }
 
     return(<div id="Main">
+        <Info/>
         <div id="navbar">
             <p>Movies</p>
             <form onSubmit={e => handleSubmit(e)}>

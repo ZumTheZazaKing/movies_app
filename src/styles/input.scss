@@ -4,10 +4,15 @@ body{
     background-color: rgb(23, 7, 66);
 }
 
+.hide{
+    display: none !important;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .App{
@@ -24,6 +29,42 @@ body{
     }
 
     #Main{
+        #Info{
+            position: fixed;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+            overflow: auto;
+            padding: 10px;
+            #info-content{
+                background-color: white;
+                margin-left: auto;
+                margin-right: auto;
+                padding:20px;
+                padding-bottom: 30px;
+                width: 60%;
+                text-align: center;
+                border-radius: 5px;
+                overflow: auto;
+                #close{
+                    cursor: pointer;
+                    float: right;
+                }
+                img{
+                    width: 180px;
+                    height: 250px;
+                }
+                #genres{
+                    color: grey;
+                }
+                a{
+                    color: black;
+                    text-decoration: none;
+                }
+                a:hover{color: rgb(0, 110, 255);}
+            }
+        }
 
         #navbar{
             background: rgb(80, 80, 80);
@@ -54,7 +95,7 @@ body{
                     border-radius: 50px 0 0 50px;
                 }
                 .search{
-                    padding: 5.5px;
+                    padding: 6px;
                     border: none;
                     outline: none;
                     color: black;
@@ -71,10 +112,11 @@ body{
             justify-content: center;
 
             .movie{
-                width: 25vw;
+                width: 20vw;
                 height: auto;
                 border: 1px solid white;
                 background-color: rgb(73, 33, 184);
+                cursor: pointer;
                 .img{
                     width: 100% !important;
                     height: 100% !important;
@@ -94,6 +136,12 @@ body{
 
     .App{
         #Main{
+
+            #Info{
+                #info-content{
+                    width: 95% !important;
+                }
+            }
 
             #navbar{
 
