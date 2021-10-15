@@ -2,8 +2,10 @@ import { useContext, lazy, Suspense, useState } from 'react';
 import { Context } from '../data/context';
 
 import CircularProgress from '@mui/material/CircularProgress';
-
 import SearchIcon from '@mui/icons-material/Search';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+
+import BackToTop from "react-back-to-top-button";
 
 const Movies = lazy(() => import('./Movies').then(module => ({default:module.Movies})));
 const Info = lazy(() => import('./Info').then(module => ({default:module.Info})));
@@ -32,5 +34,8 @@ export function Main(){
         <Suspense fallback={<div className="loading"><CircularProgress id="wheel" size={80} disableShrink/></div>}>
             <Movies/>
         </Suspense>
+        <BackToTop showAt={100} speed={1500}>
+            <KeyboardArrowUpIcon className="backToTop"/>
+        </BackToTop>
     </div>)
 }

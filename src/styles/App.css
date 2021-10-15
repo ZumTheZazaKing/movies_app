@@ -24,6 +24,12 @@ body {
 .App .loading #wheel {
   color: white;
 }
+.App #Main .backToTop {
+  background-color: #006eff;
+  color: white;
+  border-radius: 50px;
+  font-size: 48px;
+}
 .App #Main #Info {
   position: fixed;
   z-index: 2;
