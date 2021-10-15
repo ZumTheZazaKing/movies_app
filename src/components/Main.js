@@ -16,10 +16,12 @@ export function Main(){
     }
 
     return(<div id="Main">
-        <h1>Movies</h1>
-        <form onSubmit={e => handleSubmit(e)}>
-            <input type="text" value={tempValue} onChange={e => setTempValue(e.target.value)}/>
-        </form>
+        <div id="navbar">
+            <p>Movies</p>
+            <form onSubmit={e => handleSubmit(e)}>
+                <input type="text" value={tempValue} onChange={e => setTempValue(e.target.value)}/>
+            </form>
+        </div>
         <Suspense fallback={<h1>Loading...</h1>}>
             <Movies/>
         </Suspense>

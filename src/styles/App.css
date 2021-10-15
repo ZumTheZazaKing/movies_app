@@ -1,11 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap");
 body {
-  background-color: burlywood;
+  background-color: #170742;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App #Main #navbar {
+  background: #505050;
+  position: sticky;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  justify-content: space-between;
+}
+.App #Main #navbar p {
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.App #Main #navbar input[type=text] {
+  margin-left: 10px;
+  width: 40vw;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+.App #Main #Movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.App #Main #Movies .movie {
+  width: 25vw;
+  height: auto;
+  border: 1px solid white;
+  background-color: #4921b8;
+}
 .App #Main #Movies .movie .img {
-  width: 180px;
-  height: 250px;
-  border: 1px solid black;
+  width: 100% !important;
+  height: 100% !important;
+}
+.App #Main #Movies .movie p {
+  color: white;
+  padding: 10px;
+  font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+@media only screen and (max-width: 800px) {
+  .App #Main #navbar input[type=text] {
+    width: 60vw;
+  }
+  .App #Main #Movies .movie {
+    width: 50vw;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */

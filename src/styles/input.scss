@@ -1,17 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
+
 body{
-    background-color: burlywood;
+    background-color: rgb(23, 7, 66);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 .App{
     #Main{
+
+        #navbar{
+            background: rgb(80, 80, 80);
+            position: sticky;
+            z-index: 1;
+            width: 100%;
+            top: 0;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            justify-content: space-between;
+            p{
+                font-size: 26px;
+                font-weight: bold;
+                color: white;
+                font-family: 'Source Sans Pro', sans-serif;
+            }
+            input[type=text]{
+                margin-left: 10px;
+                width: 40vw;
+                font-size: 16px;
+                padding:10px;
+                border:none;
+                outline: none;
+            }
+        }
+
         #Movies{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
             .movie{
+                width: 25vw;
+                height: auto;
+                border: 1px solid white;
+                background-color: rgb(73, 33, 184);
                 .img{
-                    width: 180px;
-                    height: 250px;
-                    border: 1px solid black;
+                    width: 100% !important;
+                    height: 100% !important;
+                }
+                p{
+                    color: white;
+                    padding: 10px;
+                    font-size: 24px;
+                    font-family: 'Source Sans Pro', sans-serif;
                 }
             }
         }
     }
+}
+
+@media only screen and (max-width: 800px){
+
+    .App{
+        #Main{
+
+            #navbar{
+
+                input[type=text]{
+                    width: 60vw;
+                }
+
+            }
+
+            #Movies{
+                .movie{
+                    width: 50vw;
+                }
+            }
+
+        }
+    }
+
 }
