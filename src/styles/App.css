@@ -2,4 +2,9 @@ body {
   background-color: burlywood;
 }
 
+.App #Main #Movies .movie img {
+  width: 180px;
+  height: 250px;
+}
+
 /*# sourceMappingURL=App.css.map */
