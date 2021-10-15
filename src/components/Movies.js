@@ -10,7 +10,7 @@ export function Movies(){
         infoRef.current.className = "";
         fetch(`https://api.themoviedb.org/3/movie/${info.id}?api_key=04c35731a5ee918f014970082a0088b1`)
         .then(res => res.json())
-        .then(data => {setInspect(data); console.log(data)});
+        .then(data => {setInspect(data);});
     }
 
     useEffect(() => {
